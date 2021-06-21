@@ -1,0 +1,10 @@
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Presentacion.exe.config
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Presentacion.exe
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Presentacion.pdb
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.csprojAssemblyReference.cache
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.Form1.resources
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.Properties.Resources.resources
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.csproj.GenerateResource.cache
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.exe
+C:\Users\Mauricio\source\repos\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.pdb
