@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace Biblioteca.Presentacion
 {
@@ -31,5 +33,33 @@ namespace Biblioteca.Presentacion
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login()
+        {
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-A5KN1DG;Initial Catalog=Biblioteca;Integrated Security=True");
+            conn.Open();
+            SqlCommand cm = new SqlCommand("Select username,pass From DOCENTE where username='" + txtCorreo.Text + "' and pass='" + txtContraseña.Text + "'", conn);
+            SqlDataReader dr = cm.ExecuteReader();
+            if (dr.Read())
+            {
+                MessageBox.Show("Bienvenido a Pornhub", "Biblioteca");
+
+            }
+            else
+            {
+                MessageBox.Show("No tienes membresia", "Biblioteca");
+            }
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            login();
+        }
     }
 }
+    

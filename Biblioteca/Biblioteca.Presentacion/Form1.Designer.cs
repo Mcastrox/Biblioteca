@@ -32,11 +32,11 @@ namespace Biblioteca.Presentacion
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.Gb_Login = new System.Windows.Forms.GroupBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.rbtnDocente = new System.Windows.Forms.RadioButton();
             this.rdbtnAdmin = new System.Windows.Forms.RadioButton();
+            this.rbtnDocente = new System.Windows.Forms.RadioButton();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.Gb_Login.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,29 +76,17 @@ namespace Biblioteca.Presentacion
             this.Gb_Login.TabStop = false;
             this.Gb_Login.Text = "Iniciar Sesión";
             // 
-            // txtCorreo
+            // rdbtnAdmin
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(203, 64);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(339, 35);
-            this.txtCorreo.TabIndex = 2;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(203, 137);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(339, 35);
-            this.txtContraseña.TabIndex = 3;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Location = new System.Drawing.Point(427, 252);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(115, 39);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.rdbtnAdmin.AutoSize = true;
+            this.rdbtnAdmin.Location = new System.Drawing.Point(56, 258);
+            this.rdbtnAdmin.Name = "rdbtnAdmin";
+            this.rdbtnAdmin.Size = new System.Drawing.Size(200, 33);
+            this.rdbtnAdmin.TabIndex = 6;
+            this.rdbtnAdmin.TabStop = true;
+            this.rdbtnAdmin.Text = "Administrador";
+            this.rdbtnAdmin.UseVisualStyleBackColor = true;
+            this.rdbtnAdmin.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // rbtnDocente
             // 
@@ -112,17 +100,30 @@ namespace Biblioteca.Presentacion
             this.rbtnDocente.UseVisualStyleBackColor = true;
             this.rbtnDocente.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // rdbtnAdmin
+            // btnEntrar
             // 
-            this.rdbtnAdmin.AutoSize = true;
-            this.rdbtnAdmin.Location = new System.Drawing.Point(56, 258);
-            this.rdbtnAdmin.Name = "rdbtnAdmin";
-            this.rdbtnAdmin.Size = new System.Drawing.Size(200, 33);
-            this.rdbtnAdmin.TabIndex = 6;
-            this.rdbtnAdmin.TabStop = true;
-            this.rdbtnAdmin.Text = "Administrador";
-            this.rdbtnAdmin.UseVisualStyleBackColor = true;
-            this.rdbtnAdmin.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.btnEntrar.Location = new System.Drawing.Point(427, 252);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(115, 39);
+            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(203, 137);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(339, 35);
+            this.txtContraseña.TabIndex = 3;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(203, 64);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(339, 35);
+            this.txtCorreo.TabIndex = 2;
             // 
             // Form1
             // 
@@ -132,6 +133,7 @@ namespace Biblioteca.Presentacion
             this.Controls.Add(this.Gb_Login);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Gb_Login.ResumeLayout(false);
             this.Gb_Login.PerformLayout();
             this.ResumeLayout(false);
