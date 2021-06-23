@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DocenteLO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.Datos\Biblioteca.Datos.csproj">
+      <Project>{81308311-97c2-47d9-8603-b6309af57dcb}</Project>
+      <Name>Biblioteca.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Entidades\Biblioteca.Entidades.csproj">
+      <Project>{8dc7a13e-2fc0-436c-9a2b-e240257474fa}</Project>
+      <Name>Biblioteca.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

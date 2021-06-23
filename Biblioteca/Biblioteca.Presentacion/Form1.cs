@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Biblioteca.Entidades;
+using Biblioteca.Negocio;
 
 
 namespace Biblioteca.Presentacion
@@ -41,18 +43,31 @@ namespace Biblioteca.Presentacion
 
         private void login()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-A5KN1DG;Initial Catalog=Biblioteca;Integrated Security=True");
-            conn.Open();
-            SqlCommand cm = new SqlCommand("Select username,pass From DOCENTE where username='" + txtCorreo.Text + "' and pass='" + txtContraseña.Text + "'", conn);
-            SqlDataReader dr = cm.ExecuteReader();
-            if (dr.Read())
+            /* SqlConnection conn = new SqlConnection("Data Source=DESKTOP-A5KN1DG;Initial Catalog=Biblioteca;Integrated Security=True");
+             conn.Open();
+             SqlCommand cm = new SqlCommand("Select username,pass From DOCENTE where username='" + txtCorreo.Text + "' and pass='" + txtContraseña.Text + "'", conn);
+             SqlDataReader dr = cm.ExecuteReader();
+             if (dr.Read())
+             {
+                 MessageBox.Show("Bienvenido a Pornhub", "Biblioteca");
+
+             }
+             else
+             {
+                 MessageBox.Show("No tienes membresia", "Biblioteca");
+             }*/
+
+            DocenteLO docente = new DocenteLO();
+
+            Docente docenteLogin = docente.getDocente(txtCorreo.Text, txtContraseña.Text);
+
+            if (docenteLogin !=null)
             {
                 MessageBox.Show("Bienvenido a Pornhub", "Biblioteca");
-
             }
             else
             {
-                MessageBox.Show("No tienes membresia", "Biblioteca");
+                MessageBox.Show("No tiene membresia wachin", "Biblioteca");
             }
         }
 

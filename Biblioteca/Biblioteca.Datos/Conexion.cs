@@ -9,7 +9,7 @@ namespace Biblioteca.Datos
 {
     public class Conexion
     {
-        private string Base;
+        /*private string Base;
         private string Servidor;
         private string Usuario;
         private string Clave;
@@ -21,7 +21,7 @@ namespace Biblioteca.Datos
             this.Base = "Biblioteca";
             this.Servidor = "DESKTOP-A5KN1DG"; // aqui poner ip si lo queremos remoto
             this.Usuario = "sa";
-            this.Clave = "";//pass del server 
+            this.Clave = "californication";//pass del server 
             this.Seguridad = true; //seguridad de windows
 
         }
@@ -56,6 +56,33 @@ namespace Biblioteca.Datos
 
             }
             return Con;
+        }*/
+
+        private string v_Cadena = "Data Source=DESKTOP-A5KN1DG;Initial Catalog=Biblioteca;Integrated Security=True";
+
+        public SqlConnection m_ObtenerConexion()
+        {
+            SqlConnection conexion = new SqlConnection(v_Cadena);
+            try
+            {
+                if (conexion.State == System.Data.ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+                else
+                {
+                    conexion.Open();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            return conexion;
+
         }
     }
+
 }
